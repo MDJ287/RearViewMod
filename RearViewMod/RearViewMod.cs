@@ -74,14 +74,12 @@ namespace RearViewMod
 
         public void OnCompleteSceneLoad(OWScene previousScene, OWScene newScene)
         {
-            if (newScene != OWScene.SolarSystem)
+            switch (newScene)
             {
-                owCamera = null;
-            }
-            else
-            {
-                ModHelper.Console.WriteLine("Loaded into solar system!", MessageType.Success);
-                promptCanvas = GameObject.Find("ScreenPromptCanvas");
+                case OWScene.SolarSystem:
+                case OWScene.EyeOfTheUniverse:
+                    promptCanvas = GameObject.Find("ScreenPromptCanvas");
+                    break;
             }
         }
 
@@ -141,6 +139,10 @@ namespace RearViewMod
                 owCamera.mainCamera.CopyFrom(Locator._playerCamera.mainCamera);
                 owCamera.aspect = rearViewCameraWidth / rearViewCameraHeight;
                 owCamera.targetTexture = new RenderTexture(rearViewCameraWidth, rearViewCameraHeight, 16);
+                if (isRearViewToggled)
+                {
+                    CreateRearViewMirror();
+                }
             }
 
             if ((!rearViewToggle && rearViewKey.isPressed) || isRearViewToggled)
