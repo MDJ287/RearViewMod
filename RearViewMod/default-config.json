@@ -1,0 +1,61 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ow-mods/owml/master/schemas/config_schema.json",
+  "enabled": true,
+  "settings": {
+    "rearViewKey": {
+      "type": "text",
+      "value": "G",
+      "title": "Rear View Key",
+      "tooltip": "Key to press to see the rear view mirror"
+    },
+    "rearViewToggle": {
+      "type": "toggle",
+      "value": false,
+      "title": "Toggle Rear View",
+      "yes": "Toggle",
+      "no": "Hold",
+      "tooltip": "Toggle or hold key to view rear view"
+    },
+    "moveRearViewCamera": {
+      "type": "toggle",
+      "value": true,
+      "title": "Move camera behind player body",
+      "tooltip": "Moves camera 2m back, the player body will otherwise block the camera"
+    },
+    "mirrorRearViewCamera": {
+      "type": "toggle",
+      "value": true,
+      "title": "Mirror rear view camera display",
+      "yes": "Mirror",
+      "no": "Camera",
+      "tooltip": "Flips the camera output when set to Mirror"
+    },
+    "misc": {
+      "type": "separator"
+    },
+    "rearViewCameraX": {
+      "type": "number",
+      "value": 10,
+      "title": "Rear View Camera X",
+      "tooltip": "X pos of the bottom left corner of the rear view display"
+    },
+    "rearViewCameraY": {
+      "type": "number",
+      "value": 10,
+      "title": "Rear View Camera Y",
+      "tooltip": "Y pos of the bottom left corner of the rear view display"
+    },
+    "rearViewCameraWidth": {
+      "type": "number",
+      "value": 512,
+      "title": "Rear View Camera Width",
+      "tooltip": "Width of the rear view display"
+    },
+    "rearViewCameraHeight": {
+      "type": "number",
+      "value": 512,
+      "title": "Rear View Camera Height",
+      "tooltip": "Height of the rear view display"
+    }
+  }
+}
