@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/ow-mods/owml/master/schemas/manifest_schema.json",
   "filename": "RearViewMod.dll",
   "author": "MDJ287",
-  "name": "RearViewMod",
+  "name": "Rear View Mirror",
   "uniqueName": "MDJ287.RearViewMod",
   "version": "0.1.0",
   "owmlVersion": "2.15.1",
